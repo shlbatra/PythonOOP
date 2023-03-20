@@ -10,8 +10,8 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
 
         # Assign to self object
-        self.__name = name
-        self.__price = price
+        self.__name = name     # private attribute
+        self.__price = price   # private attribute
         self.quantity = quantity
 
         # Actions to execute
@@ -19,7 +19,7 @@ class Item:
 
     @property
     def price(self):
-        return self.__price
+        return self.__price   # Read only price attribute 
 
     def apply_discount(self):
         self.__price = self.__price * self.pay_rate
@@ -70,3 +70,24 @@ class Item:
     def __repr__(self):
         return f"{self.__class__.__name__}('{self.name}', {self.__price}, {self.quantity})"
 
+    def __connect(self, smtp_server):
+        pass
+
+    def __prepare_body(self):
+        return f"""
+        Hello Someone, 
+        We have {self.name} {self.quantity} times.
+        Regards, Sahil 
+        """
+
+    def __send_email(self):
+        pass
+
+    def send_email(self):
+        self.__send_email('')
+        self.__prepare_body()
+        self.__send()
+        #methods called from send email only so hide access to these methods from instance level
+        #convert these methods as private methods by adding __.
+        # they can be called by class level only - inside class 
+    

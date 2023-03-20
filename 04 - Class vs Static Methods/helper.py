@@ -1,15 +1,17 @@
 # When to use class methods and when to use static methods ?
 
+
 class Item:
     @staticmethod
-    def is_integer():
+    def is_integer(num):#regular parameter
         '''
         This should do something that has a relationship
         with the class, but not something that must be unique
         per instance!
+        Similar to normal function with parameter related to class
         '''
     @classmethod
-    def instantiate_from_something(cls):
+    def instantiate_from_something(cls):#mandatory parameter
         '''
         This should also do something that has a relationship
         with the class, but usually, those are used to

@@ -1,0 +1,2 @@
+- Use dundar methods to override standard operations for user defined classes 
+- https://docs.python.org/3/reference/datamodel.html

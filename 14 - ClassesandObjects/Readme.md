@@ -1,0 +1,21 @@
+- Classes (Blueprint for creating objects)
+- Objects (Instance of class)
+- x = 1 (int) -> type class int to create object
+- y = "str" -> string
+- class blueprint that defines functionality that object has
+- z = 1+1 (int class has add functionality)
+- z = 1+"str" (not acceptable as behavior not defined in class)
+- object instance of class - can have multiple objects
+- class 
+    - has constructor defined by __init__
+    - called everytime you create an object of that class
+    - self -> refers to instance for which method called
+    - attribute - data linked for object of class
+    - methods -> behaviour of instances 
+    - create instance 
+        - dog = Dog("sahil",4,"person") -> by default constructor called
+        - dog2 = Dog(..) -> seperate instance but both have same behaviors
+        - dog.bark()
+        - each instance has its own attributes. each object is individual
+        - 
+

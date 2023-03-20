@@ -1,0 +1,1 @@
+- __init__ is a dundar method that is used as a constructor defined for any user defined class 

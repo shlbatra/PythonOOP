@@ -1,0 +1,4 @@
+- Class attributes are global across all instances (defined under class) and object attributes are local to object (defined in __init__)
+- Class level attributes are referenced from class ex. <class_name>.<class_attribute>
+- If same attribute name for class and object attribute, then we get object attribute first else class attribute when referencing from object.  
+- Magic attribute to see all attributes / methods for classes or objects. <name>.__dict__

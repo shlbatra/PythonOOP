@@ -1,0 +1,7 @@
+- Python interpreter before reading a file
+    - Sets special variables like __name__
+    - Executes the file line by line
+- Diff design pattern 
+    - File run directly as program (Main Execution File) -> __name__ = __main__
+    - File run as a module from another file -> __name__ != __main__ 
+- Even if specific method/attribute imported from module, the entire module is run

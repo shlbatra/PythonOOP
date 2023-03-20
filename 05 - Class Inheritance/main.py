@@ -1,7 +1,7 @@
 import csv
 
-
 class Item:
+    #parent class
     pay_rate = 0.8 # The pay rate after 20% discount
     all = []
     def __init__(self, name: str, price: float, quantity=0):
@@ -49,15 +49,18 @@ class Item:
             return False
 
     def __repr__(self):
+        #get name of class generically using magic method
         return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity})"
 
 
 class Phone(Item):
+    #all=[]
+    #child class
     def __init__(self, name: str, price: float, quantity=0, broken_phones=0):
-        # Call to super function to have access to all attributes / methods
+        # Call to super function to have access to all attributes / methods of parent class
         super().__init__(
             name, price, quantity
-        )
+        ) #special arguments from parent class
 
         # Run validations to the received arguments
         assert broken_phones >= 0, f"Broken Phones {broken_phones} is not greater or equal to zero!"
@@ -65,6 +68,17 @@ class Phone(Item):
         # Assign to self object
         self.broken_phones = broken_phones
 
-phone1 = Phone("jscPhonev10", 500, 5, 1)
+        #Actions to execute
+        #Phone.all.append(self)
 
+#method to calculate not broken phones but cannot do in item as not have broken_phones attribute 
+#to solve this problem, seperate class - inherit functionality from item class
+#phone1 = Item("jscPhonev10", 500, 5, 1)
+#phone1.broken_phones = 1
+phone2 = Item("jscPhonev20", 700, 5)
+
+phone1 = Phone("jscPhonev10", 500, 5, 1)
+print(phone1.calculate_total_price())
 print(Item.all)
+print("\n\n")
+print(Phone.all)

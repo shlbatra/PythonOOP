@@ -1,0 +1,4 @@
+- import classes from other files in your main.py file
+- Private class / private methods and attributes start with _
+- private means that other programmers not modify code in private classes/methods. In addition, access to them is scoped
+- Python language doesnt implement private class/methods. But as convention, we can use _ in front of name to signal something as private so other programmers are careful not to modify code/access to these class and methods is scoped. 
